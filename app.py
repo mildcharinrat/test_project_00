@@ -8,11 +8,20 @@ Original file is located at
 """
 
 import streamlit as st
-import random
+import pandas as pd
 
+st.set_page_config(layout="wide")
 st.title('Test Streamlit')
-st.write('Hello World Mild!')
 
-if st.button('Generate Random Number'):
-    random_number = random.randint(1, 100)
-    st.write(f'Random Number: {random_number}')
+username_input = st.text_input(
+    "username: ",
+    value="??????"
+)
+
+password_input = st.text_input(
+    "Password: ",
+    type="password",
+    placeholder="pls give password"
+)
+
+st.write(username_input,password_input)
